@@ -24,7 +24,10 @@ textarea, input, select {
 .faded {
 	background-color:rgba(50,50,50,0.4);
 	padding: 0px 20px 20px 20px;
+<<<<<<< HEAD
 	margin-top:3px;
+=======
+>>>>>>> origin/Bo
 }
 
 img{
@@ -109,7 +112,10 @@ a:hover{
 
 .content-image{
 	border:5px double black;
+<<<<<<< HEAD
 	margin-bottom:10px;
+=======
+>>>>>>> origin/Bo
 }
 
 .feature{
@@ -167,10 +173,15 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 
 .about-container{
 	background-color:rgba(205,220,186,0.4);
+<<<<<<< HEAD
+=======
+	/*border: 2px solid #868B5C;*/
+>>>>>>> origin/Bo
     border-radius: 5px;
 	-moz-box-shadow: 0 0 5px 5px #868B5C;
 	-webkit-box-shadow: 0 0 5px 5px #868B5C;
 	box-shadow: 0 0 5px 5px #868B5C;
+<<<<<<< HEAD
 	padding: 10px;
 	float:none;
 	margin: 0 auto;
@@ -204,11 +215,45 @@ h3.about{
 }
 
 /*
+=======
+	padding: 20px;
+	float:none;
+	margin: 0 auto;
+	margin-top:20px;
+	
+	width:260px;
+	height:400px;
+	
+}
+/*
+h3.about{
+height:62px;
+}*/
+
+.about-tiles{
+	text-align:center;
+	margin-top:40px;
+	margin-bottom:5px;
+}
+
+.tttt{
+margin-bottom:40px;
+}
+
+#info-image{
+	text-align:center;
+}
+
+>>>>>>> origin/Bo
 .col-centered {
     display:inline-block;
     float:none;
 	vertical-align:middle;
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> origin/Bo
 
 /*-------------------------------------------------- 
 /* buttons
@@ -465,7 +510,11 @@ h3.about{
 /* footer
 /*-------------------------------------------------- */
 footer{
+<<<<<<< HEAD
 	padding:8px 0 8px 0;
+=======
+	padding:20px 0 20px 0;
+>>>>>>> origin/Bo
 }
 footer a{
 	color:#fff;
@@ -476,11 +525,14 @@ footer .footer-text {
 	font-size:24px;
 	font-weight:bold;
 	color:#000;
+<<<<<<< HEAD
 	padding-top:5px;
 }
 
 .footer-content {
 	padding:15px;
+=======
+>>>>>>> origin/Bo
 }
 
 /*-------------------------------------------------- 
