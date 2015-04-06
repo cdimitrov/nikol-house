@@ -174,8 +174,6 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 	padding: 10px;
 	float:none;
 	margin: 0 auto;
-	width:220px;
-	height:360px;
 	margin-top:15px;
 }
 
@@ -195,11 +193,16 @@ h3.about{
 	padding-right: 0px;	
 }
 
+.about-tile{
+	width:220px;
+	height:360px;
+}
+
 .about-image{
 	margin-top:-15px;
 }
 
-#accomodation-btn, #troyan-btn{
+#accommodation-btn, #troyan-btn{
 	margin-top:19px;
 }
 
