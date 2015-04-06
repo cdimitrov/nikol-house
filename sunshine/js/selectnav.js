@@ -22,13 +22,13 @@ window.selectnav = (function(){
 		document.documentElement.className += " js";
 
 		// retreive options and set defaults
-		var o = options || {},
+			var o = options || {},
 			
 			activeclass = o.activeclass || 'active',
 			autoselect = typeof(o.autoselect) === "boolean" ? o.autoselect : true,
 			nested = typeof(o.nested) === "boolean" ? o.nested : true,
 			indent = o.indent || "→",
-			label = o.label || "- Navigation -",
+			label = o.label || "",
 			
 			// helper variables
 			level = 0,
