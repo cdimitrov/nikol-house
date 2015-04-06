@@ -9,123 +9,69 @@ jQuery(document).ready(function() {
 			indent: '-'
 		});
 	});
-	
 
-	
-	// ==================================================
-	// filtering gallery
-	// ==================================================	
-	var $container = $('#gallery');
 
-	$container.imagesLoaded(function() {
-	  $container.isotope({
-		itemSelector: '.item',
-		filter: '*',
-	  });
-	});
-	
-	jQuery('#filters a').click(function(){
-		var jQuerythis = jQuery(this);
-		if ( jQuerythis.hasClass('selected') ) {
-			return false;
-			}
-		var jQueryoptionSet = jQuerythis.parents();
-		jQueryoptionSet.find('.selected').removeClass('selected');
-		jQuerythis.addClass('selected');
-				
-		var selector = jQuery(this).attr('data-filter');
-		jQuerycontainer.isotope({ 
-		filter: selector,
-	});
-	return false;
-	});
-	
-	
+
 	// ==================================================
-	// prettyPhoto function
-	// ==================================================	
-	jQuery("area[rel^='prettyPhoto']").prettyPhoto();
-	jQuery(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
-	jQuery(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
-		
-	jQuery("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
-		custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
-		changepicturecallback: function(){ initialize(); }
-	});
-	jQuery("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
-		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
-		changepicturecallback: function(){ _bsap.exec(); }
-	});
-	
-	
+	// lazyload ????
 	// ==================================================
-	// scroll to top
-	// ==================================================	
-	jQuery().UItoTop({ easingType: 'easeOutQuart' });
-	  
-	// ==================================================
-	// gallery hover
-	// ==================================================	
-	jQuery('.gallery .item').hover(function() {
-	jQuery('.gallery .item').not(jQuery(this)).stop().animate({opacity: .3}, 100);
-	}, function() {
-	jQuery('.gallery .item').stop().animate({opacity: 1});}, 100);
-	
-	
-	// ==================================================
-	// resize
-	// ==================================================	
-	window.onresize = function(event) {
-		jQuery('#gallery').isotope('reLayout');
-  	};
-	
-	
-	// ==================================================
-	// show / hide slider navigation
-	// ==================================================	
-	jQuery('.callbacks_nav').hide();
-	
-	jQuery('#slider').hover(function() {
-	jQuery('.callbacks_nav').stop().animate({opacity: 1}, 100);
-	}, function() {
-	jQuery('.callbacks_nav').stop().animate({opacity: 0});}, 100);
-	
-	
-	
-	
-	jQuery(function () {
-      // Slideshow 4
-      jQuery(".pic_slider").responsiveSlides({
-        auto: true,
-        pager: false,
-        nav: true,
-        speed: 500,
-        namespace: "callbacks",
-        before: function () {
-          jQuery('.events').append("<li>before event fired.</li>");
-        },
-        after: function () {
-          jQuery('.events').append("<li>after event fired.</li>");
-        }
-      });
-    });
-	
-	
-	
-	
-	// ==================================================
-	// lazyload
-	// ==================================================	
 	 $(function() {
           $("img").lazyload({
               effect : "fadeIn",
-			  effectspeed: 900 
+			  effectspeed: 900
           });
       });
 
+	// ==================================================
+	// about us containers
+	// ==================================================
+	$(function() {
+		/* boxes = $('.about-container');
+		maxHeight = Math.max.apply(
+			Math, boxes.map(function() {
+		return $(this).height();
+		}).get());
+		boxes.height(maxHeight); */
+		setAboutContainerHeight();
+	});
+	
+	function setAboutContainerHeight() {
+		boxes = $('.about-container');
+		maxHeight = Math.max.apply(
+			Math, boxes.map(function() {
+		return $(this).height();
+		}).get());
+		//boxes.height(maxHeight);
+	}
+	
+	$('.about-container').change( function() {
+		setAboutContainerHeight();
+	});
 
-	
-	
-	
+
+	// ==================================================
+	// Gallery test
+	// ==================================================
+	$('#myCarousel').carousel({
+    interval: 4000
+	});
+
+// handles the carousel thumbnails
+$('[id^=carousel-selector-]').click( function(){
+  var id_selector = $(this).attr("id");
+  var id = id_selector.substr(id_selector.length -1);
+  id = parseInt(id);
+  $('#myCarousel').carousel(id);
+  $('[id^=carousel-selector-]').removeClass('selected');
+  $(this).addClass('selected');
 });
 
+// when the carousel slides, auto update
+$('#myCarousel').on('slid', function (e) {
+  var id = $('.item.active').data('slide-number');
+  id = parseInt(id);
+  $('[id^=carousel-selector-]').removeClass('selected');
+  $('[id=carousel-selector-'+id+']').addClass('selected');
+});
+
+});

@@ -5,35 +5,31 @@
 /* body
 /*-------------------------------------------------- */
 body{
-	font-family:"Open Sans", Arial, Helvetica, sans-serif;
-	font-size:13px;
-	line-height:1.7em;
-	color:#727272;
-	background:#f5f5f5;
+	font-family:Roboto,Arial,sans-serif;
+	font-size:18px;
+	line-height:22px;
+	color:#000000;
+	background:url(../img/background.jpg) center no-repeat fixed;
+	background-size:cover;
 	margin:0;
 	padding:0;
 }
 
-header{
-	background:#fff;
+textarea, input, select {
+    box-sizing: border-box;
+    text-align:justify;
 }
 
-#subheader{
-	background: url(../img/bg-blur-1.jpg) center no-repeat fixed; 
-	padding:30px 0 30px 0;
-	border-bottom:solid 1px #eee;
+
+.faded {
+	background-color:rgba(50,50,50,0.4);
+	padding: 0px 20px 20px 20px;
 }
-#subheader h1{
-	letter-spacing:-2px;
-	float:left;
-	border-right:solid 1px #555;
-	padding-right:40px;
-	margin-right:40px;
-}
-#subheader span{
-	display:inline-block;
-	padding-top:20px;
-	font-size:16px;
+
+img{
+	height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 
@@ -44,25 +40,36 @@ header{
 /* heading
 /*-------------------------------------------------- */
 h1,h2{font-weight:lighter;}
-h3,h4,h5,h6{font-weight:500; color:#333;}
+h3,h4,h5,h6{font-weight:500; color:#000000;}
 footer h3, footerh4, footerh5, footer h6{font-weight:500; color:#fff;}
 h1.h1-style{
 	letter-spacing:-2px;
 	font-weight:lighter;
 }
+h1.title{
+	font-family: 'marck script';
+	font-style: cursive;
+	font-weight:bold;
+	font-size: 48px;
+	color: #000000;
+	line-height:61px;
+}
 h3.title{
-	font-size:20px;
-	font-weight:600;
-	border-bottom:solid 1px #ccc;
+	font-family:marck script, cursive;
+	font-size:24px;
+	font-weight:700;
 	padding-bottom:10px;
 	margin-bottom:20px;
+	line-height:31px;
 }
 h2{
-	font-size:42px;
-	color:#ec6841;
+	font-family:marck script, cursive;
+	font-size:38px;
+	font-weight:700;
+	color:#ffcb05;
 	letter-spacing:-2px;
-	line-height:inherit;
-	margin-top:0;
+	line-height:48px;
+	margin-left:5px;
 }
 h3.title-property{margin:0;}
 h3{
@@ -91,7 +98,6 @@ a:hover{
 	text-align:center;	
 }
 #logo .inner{
-	margin:40px 0 40px 0;
 	display:inline-block;
 }
 
@@ -99,11 +105,10 @@ a:hover{
 /*-------------------------------------------------- 
 /* content
 /*-------------------------------------------------- */
-#content{
-	padding:60px 0 60px 0;
-	text-shadow: 1px 1px #fff;
-}
 
+.content-image{
+	border:5px double black;
+}
 
 .feature{
 	text-align:center;
@@ -137,6 +142,97 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 .small-list span{display:block;}
 .small-list .price{display:inline-block; font-size:16px; margin:2px 0 2px 0;}
 .small-list:hover{background:#f2f2f2;}
+
+/*-------------------------------------------------- 
+/* about us
+/*-------------------------------------------------- */
+.about-info{
+	word-wrap:break-word;
+	text-align:justify;
+}
+
+.about{
+	text-align:center;
+}
+
+.about-text{
+	font-size:16px;
+	line-height:19px;
+	word-wrap:break-word;
+	text-align:justify;
+	padding-bottom:10px;
+}
+
+.about-container{
+	background-color:rgba(205,220,186,0.4);
+	/*border: 2px solid #868B5C;*/
+    border-radius: 5px;
+	-moz-box-shadow: 0 0 5px 5px #868B5C;
+	-webkit-box-shadow: 0 0 5px 5px #868B5C;
+	box-shadow: 0 0 5px 5px #868B5C;
+	padding: 20px;
+	float:none;
+	margin: 0 auto;
+	margin-top:20px;
+	
+	width:260px;
+	height:400px;
+	
+}
+/*
+h3.about{
+height:62px;
+}*/
+
+.about-tiles{
+	text-align:center;
+	margin-top:40px;
+	margin-bottom:5px;
+}
+
+.tttt{
+margin-bottom:40px;
+}
+
+#info-image{
+	text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+	vertical-align:middle;
+}
+
+/*-------------------------------------------------- 
+/* buttons
+/*-------------------------------------------------- */
+.green-button{
+	font-family: marck script, cursive;
+	font-weight: 700;
+	font-size: 28px;
+	color: #000000;
+	padding: 0px 30px 0px 30px;
+	background: url("http://static.parastorage.com/services/skins/2.995.7/images/wysiwyg/core/themes/base/indented_bg.png") repeat-x scroll 0 0 rgba(196, 201, 48, 1);
+    border: 0 solid rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    cursor: pointer !important;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+	text-shadow:none;
+}
+
+.btn:hover, 
+.btn:focus,
+.btn:active,
+.green-button :hover,
+.green-button :active
+.green-button :focus{
+	background-color: rgba(103, 105, 59, 1);
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+	color: #ffcb05;
+	text-shadow:none;
+}
 
 
 /*-------------------------------------------------- 
@@ -263,20 +359,17 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 
 #mainmenu-container{
 	/*background:#f9f3e9;*/
-	border-top:solid 1px #eee;
+	border-top:solid 1px #ffcb05;
 	text-align:center;
 	width:100%;
-	height:70px;
+	padding-top:10px;
 }
 #mainmenu {
   color:#333;
   font-weight:400;
   font-size:13px;
   letter-spacing:0px;
-  display:inline-block;
-  text-align:left;
-  text-transform:uppercase;
-  letter-spacing:2px;
+  text-align:center;
   
 }
 
@@ -284,7 +377,7 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
   float:right;
   margin:0px 0px;
   padding:0px 0px;
-  height:30px;
+  height:20px;
 }
 
 #mainmenu li {
@@ -298,13 +391,15 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 
 #mainmenu a {
   display:block;
-  padding:26px 17px 24px 17px;
+  padding:0px 20px;
   text-decoration:none;
-  color:#555555;
+  color:#fff7b6;
+  font-family: 'Lobster', cursive;
+  font-size:22px;
 }
 
 #mainmenu a:hover{
-	color:#fff;
+	color:#ffcb05;
 }
 
 #mainmenu li li {
@@ -313,7 +408,6 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 
 #mainmenu li li a{
 	padding:10px 15px 10px 15px;
-	background:#665048;
 	border-top:none;
 	text-transform:none;
 	letter-spacing:normal;
@@ -324,8 +418,7 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 }
 
 #mainmenu li li a:hover {
-	color:#fff;
- 	background:#665048;
+	color:#ffcb05;
 }
 
 #mainmenu li ul {
@@ -353,8 +446,8 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 }
 
 #mainmenu li:hover a {
-	color:#fff;
-	background:#58453F;
+	color:#ffcb05;
+	/*background:#58453F;*/
 }
 
 #mainmenu select {padding:10px; height:36px; font-size:14px; border:none; background:#ff4200; color:#fff;}
@@ -366,15 +459,18 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 /* footer
 /*-------------------------------------------------- */
 footer{
-	background:#58453F;
-	color:#fff;
 	padding:20px 0 20px 0;
 }
 footer a{
 	color:#fff;
 }
-footer h3{font-size:20px;}
 
+footer .footer-text {
+	font-family:marck script, cursive;
+	font-size:24px;
+	font-weight:bold;
+	color:#000;
+}
 
 /*-------------------------------------------------- 
 /* subfooter
@@ -565,22 +661,6 @@ blockquote span{
 #commentform textarea:focus{border:solid 1px #999; background:#fff;}
 #commentform input.btn{ width:auto;}
 
-#slider{
-	text-align:center;
-	height:100%;
-}
-#slider img{
-}
-.slider-info{
-	width:100%;
-	height:100%;
-	position:absolute;  
-	z-index:10;
-}
-.callbacks_nav.prev{ left:0;}
-.callbacks_nav.next{ right:0;}
-.slider-info h1{background:#fff; display:inline-block; padding:10px 20px 10px 20px; letter-spacing:-2px; position:relative; top:40%;}
-.slider-info .text1{background:#333; color:#fff; padding:10px 20px 10px 20px; font-size:14px;}
 
 /*-------------------------------------------------- 
 /* contact */
@@ -679,6 +759,9 @@ blockquote span{
 }
 .call-to-action h3{margin-top:0;}
 
+.social-icons {
+text-align:right;
+}
 .social-icons img{margin:0 5px 5px 0;}
 footer .social-icons img{margin:0 0;}
 
