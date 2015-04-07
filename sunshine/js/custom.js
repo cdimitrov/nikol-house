@@ -26,26 +26,46 @@ jQuery(document).ready(function() {
 	// ==================================================
 	// Gallery test
 	// ==================================================
-	$('#myCarousel').carousel({
-	interval: 4000
-	});
+	
+	$(function() {
+		$('#myCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#myCarouselThumbs').carousel({
+		interval: 0
+		});
+		
+		// handles the carousel thumbnails
+		$('[id^=carousel-selector-]').click( function(){
+		  var id_selector = $(this).attr("id");
+		  var id = id_selector.replace('carousel-selector-','');
+		  id = parseInt(id);
+		  $('#myCarousel').carousel(id);
+		  $('[id^=carousel-selector-]').removeClass('selected');
+		  $(this).addClass('selected');
+		  
+		  $('.thumb-page').removeClass('active');
+		  $(this).parents('.thumb-page').addClass('active');
+		});
 
-	// handles the carousel thumbnails
-	$('[id^=carousel-selector-]').click( function(){
-	  var id_selector = $(this).attr("id");
-	  var id = id_selector.substr(id_selector.length -1);
-	  id = parseInt(id);
-	  $('#myCarousel').carousel(id);
-	  $('[id^=carousel-selector-]').removeClass('selected');
-	  $(this).addClass('selected');
-	});
-
-	// when the carousel slides, auto update
-	$('#myCarousel').on('slid', function (e) {
-	  var id = $('.item.active').data('slide-number');
-	  id = parseInt(id);
-	  $('[id^=carousel-selector-]').removeClass('selected');
-	  $('[id=carousel-selector-'+id+']').addClass('selected');
+		// when the carousel slides, auto update
+		$('#myCarousel').on('slide.bs.carousel', function (e) {
+		  var id = $('.item.active.photo-item').data('slide-number');
+		  id = parseInt(id)+1;
+		  if($('[id^=carousel-selector-]').length <= id)
+		  {
+			id = 0;
+		  }
+		  $('[id^=carousel-selector-]').removeClass('selected');
+		  $('[id=carousel-selector-'+id+']').addClass('selected');
+		  
+		  var currentThumbPage = $('[id=carousel-selector-'+id+']').parents('.thumb-page');
+		  $('.thumb-page').removeClass('active');
+		  currentThumbPage.addClass('active');
+		  var currentThumbPageIndex = parseInt(currentThumbPage.data('thumb-page'));
+		  $('#myCarouselThumbs').carousel(currentThumbPageIndex);
+		});
 	});
 
 });
