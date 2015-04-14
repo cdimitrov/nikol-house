@@ -17,8 +17,8 @@ jQuery(document).ready(function() {
 	
 	$(function() {
 		$('#myCarousel').carousel({
-		interval: 4000
-		//interval:0
+		//interval: 4000
+		interval:0
 		});
 		
 		$('#myCarouselThumbs').carousel({
