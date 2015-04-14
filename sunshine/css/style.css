@@ -145,6 +145,36 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 .small-list:hover{background:#f2f2f2;}
 
 /*-------------------------------------------------- 
+/* buttons
+/*-------------------------------------------------- */
+.green-button {
+	font-family: marck script, cursive;
+	font-weight: 700;
+	font-size: 28px;
+	color: #000000;
+	padding: 0px 30px 0px 30px;
+	background: url("http://static.parastorage.com/services/skins/2.995.7/images/wysiwyg/core/themes/base/indented_bg.png") repeat-x scroll 0 0 rgba(196, 201, 48, 1);
+    border: 0 solid rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    cursor: pointer !important;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+	text-shadow:none;
+}
+
+.btn:hover, 
+.btn:focus,
+.btn:active,
+.green-button :hover,
+.green-button :active
+.green-button :focus{
+	background-color: rgba(103, 105, 59, 1);
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+	color: #ffcb05;
+	text-shadow:none;
+}
+
+/*-------------------------------------------------- 
 /* about us
 /*-------------------------------------------------- */
 .about-info {
@@ -211,20 +241,22 @@ h3.room-title {
 
 
 .room-description {
-	margin-bottom:20px;
+	margin-bottom:0px;
 }
 
 .room-price {
 	font-family:Roboto,Arial,sans-serif;
 	font-size: 16px;
 	font-weight: bold;
+	margin-bottom:5px;
 }
 
 .price {
 	font-weight:600;
 	font-size:24px;
 }
-.price-info {
+
+/* .price-info {
 	text-shadow:none;
 	display:inline-block;
 	background:#fff;
@@ -235,7 +267,7 @@ h3.room-title {
 	-moz-box-shadow:    1px 1px 1px rgba(50, 50, 50, 0.2);
 	box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.2);
 
-}
+} */
 
 #accommodation-btn, #troyan-btn {
 	margin-top:19px;
@@ -243,6 +275,11 @@ h3.room-title {
 
 .room-carousel img {
 	/*border: 4px double black;*/
+	/*margin: 5px 0px;*/
+}
+
+.booking-btn {
+	padding: 0 20px;
 }
 
 /*-------------------------------------------------- 
@@ -313,37 +350,6 @@ h3.room-title {
 
 #galleryCarousel {
 	margin-top: 20px;
-}
-
-
-/*-------------------------------------------------- 
-/* buttons
-/*-------------------------------------------------- */
-.green-button {
-	font-family: marck script, cursive;
-	font-weight: 700;
-	font-size: 28px;
-	color: #000000;
-	padding: 0px 30px 0px 30px;
-	background: url("http://static.parastorage.com/services/skins/2.995.7/images/wysiwyg/core/themes/base/indented_bg.png") repeat-x scroll 0 0 rgba(196, 201, 48, 1);
-    border: 0 solid rgba(255, 255, 255, 1);
-    border-radius: 3px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-    cursor: pointer !important;
-    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
-	text-shadow:none;
-}
-
-.btn:hover, 
-.btn:focus,
-.btn:active,
-.green-button :hover,
-.green-button :active
-.green-button :focus{
-	background-color: rgba(103, 105, 59, 1);
-    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
-	color: #ffcb05;
-	text-shadow:none;
 }
 
 /*-------------------------------------------------- 
