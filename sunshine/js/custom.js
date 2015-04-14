@@ -16,7 +16,11 @@ jQuery(document).ready(function() {
 	// ==================================================
 	
 	$(function() {
-		$('#myCarousel').carousel({
+		$('#circleRoomCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#galleryCarousel').carousel({
 		//interval: 4000
 		interval:0
 		});

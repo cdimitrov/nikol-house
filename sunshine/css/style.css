@@ -209,12 +209,15 @@ h3.room-title {
 	margin-bottom:0px;
 }
 
+
 .room-description {
 	margin-bottom:20px;
 }
 
 .room-price {
+	font-family:Roboto,Arial,sans-serif;
 	font-size: 16px;
+	font-weight: bold;
 }
 
 .price {
@@ -236,6 +239,10 @@ h3.room-title {
 
 #accommodation-btn, #troyan-btn {
 	margin-top:19px;
+}
+
+.room-carousel img {
+	/*border: 4px double black;*/
 }
 
 /*-------------------------------------------------- 
@@ -297,12 +304,15 @@ h3.room-title {
  
 .photo-item {
 	text-align:center;
-	margin-top: 20px;
  }
  
 .carousel-inner > .item > img {
     display: inline;
 	max-height:500px;
+}
+
+#galleryCarousel {
+	margin-top: 20px;
 }
 
 
