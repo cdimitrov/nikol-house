@@ -9,16 +9,36 @@ jQuery(document).ready(function() {
 			indent: '-'
 		});
 	});
-
-
+	
 	// ==================================================
-	// Gallery slider with thumbnails
+	// Accommodation room sliders
 	// ==================================================
 	
 	$(function() {
 		$('#circleRoomCarousel').carousel({
 		interval: 4000
 		});
+		
+		$('#whiteRoomCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#flowerRoomCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#peachRoomCarousel').carousel({
+		interval: 4000
+		});
+
+	});
+		
+	
+	// ==================================================
+	// Gallery slider with thumbnails
+	// ==================================================
+	
+	$(function() {
 		
 		$('#galleryCarousel').carousel({
 		//interval: 4000

@@ -256,6 +256,11 @@ h3.room-title {
 	font-size:24px;
 }
 
+#pricesInfo {
+	padding-top:10px;
+	padding-bottom:0px;
+}
+
 /* .price-info {
 	text-shadow:none;
 	display:inline-block;
@@ -273,7 +278,7 @@ h3.room-title {
 	margin-top:19px;
 }
 
-.room-carousel img {
+.room-carousel {
 	/*border: 4px double black;*/
 	/*margin: 5px 0px;*/
 }
