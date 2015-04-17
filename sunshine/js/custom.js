@@ -32,7 +32,29 @@ jQuery(document).ready(function() {
 		});
 
 	});
+	
+	// ==================================================
+	// About Troyan
+	// ==================================================
+	
+	$(function() {
+		$('#troyanCarousel').carousel({
+		interval: 4000
+		});
 		
+		 $('#naturalArtMuseumCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#naturalSciencesMuseumCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#seryakovaHouseCarousel').carousel({
+		interval: 4000
+		}); 
+
+	});	
 	
 	// ==================================================
 	// Gallery slider with thumbnails

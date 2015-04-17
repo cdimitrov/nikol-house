@@ -358,6 +358,41 @@ h3.room-title {
 }
 
 /*-------------------------------------------------- 
+/* gallery
+/*-------------------------------------------------- */
+
+.about-troyan {
+	font-size: 16px;
+	line-height: 20px;
+	text-align:justify;
+	word-wrap:break-word;
+}
+
+.troyan-slider {
+	padding-top:5px;
+}
+
+h3.troyan {
+	font-family: marck script, cursive;
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 41px;
+}
+
+h4.troyan {
+	font-family: marck script, cursive;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 31px;
+	margin-top:0px;
+}
+
+.troyan-tile {
+	padding-bottom:15px;
+}
+
+
+/*-------------------------------------------------- 
 /* booking
 /*-------------------------------------------------- */
 #booking{
