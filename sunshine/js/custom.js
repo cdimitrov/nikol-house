@@ -46,6 +46,10 @@ jQuery(document).ready(function() {
 		interval: 4000
 		});
 		
+		$('#seryakovaHouseCarousel').carousel({
+		interval: 4000
+		});
+		
 		$('#naturalSciencesMuseumCarousel').carousel({
 		interval: 4000
 		});
@@ -53,6 +57,22 @@ jQuery(document).ready(function() {
 		$('#seryakovaHouseCarousel').carousel({
 		interval: 4000
 		}); 
+		
+		$('#troyanMonasteryCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#zelenikovskiMonasteryCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#sostraCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#babaStanaCarousel').carousel({
+		interval: 4000
+		});
 
 	});	
 	
