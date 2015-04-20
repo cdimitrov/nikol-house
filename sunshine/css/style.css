@@ -358,7 +358,7 @@ h3.room-title {
 }
 
 /*-------------------------------------------------- 
-/* gallery
+/* Troyan
 /*-------------------------------------------------- */
 
 .about-troyan {
@@ -391,6 +391,69 @@ h4.troyan {
 	padding-bottom:15px;
 }
 
+/*-------------------------------------------------- 
+/* Contact
+/*-------------------------------------------------- */
+
+.contact-input {
+	margin: 0 5px 5px;
+	line-height:23.4px;
+	font-size:17px;
+	font-family:Roboto;
+	border: 0 solid rgba(32, 39, 6, 1);
+	border-radius: 3px;
+    padding: 5px;
+}
+
+#btnsubmit {
+	padding-right:5px;
+	padding-top:5px;
+}
+
+#contact {
+	padding-top:5px;
+}
+
+#contact-address, #contact-phone , #contact-mail{
+	margin-bottom:25px;
+}
+
+.contact-info{
+	font-size: 17px;
+	padding-left:20px;
+}
+
+.contact-title {
+	font-size: 17px;
+	font-weight:bold;
+	margin-bottom:3px;
+}
+
+.enquiry-title {
+	padding-left:5px;
+}
+
+input,textarea::-webkit-input-placeholder { /* WebKit browsers */
+	color: #a9a9a9;
+}
+
+input,textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #a9a9a9;
+}
+
+input,textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #a9a9a9;
+}
+
+input,textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: #a9a9a9;
+}
+
+#map-container {
+	padding-left:5px;
+	padding-top:10px;
+	padding-right:5px;
+}
 
 /*-------------------------------------------------- 
 /* booking
