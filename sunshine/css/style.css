@@ -449,6 +449,26 @@ input,textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
 	color: #a9a9a9;
 }
 
+.error {
+	padding:0px 5px 5px 5px; 
+	display: none;
+	color:#C03; 
+	font-size:14px;
+	font-family: Roboto;
+}
+
+.success { 
+	display: none; 
+	padding:0px 5px 5px 5px; 
+	color:#555; 
+	font-size:14px;
+	font-family: Roboto;
+}
+
+.full{ 
+	width:98%;
+}
+
 #map-container {
 	padding-left:5px;
 	padding-top:10px;
@@ -700,81 +720,12 @@ blockquote span{
 /*-------------------------------------------------- */
 .related-property{margin-top:40px; padding-top:40px; border-top:solid 1px #ccc;}
 
-/*-------------------------------------------------- 
-/* contact */
-/*-------------------------------------------------- */
-.error { width:280px; background:#FCD8DC; padding:2px 10px 2px 10px; display: none;color:#C03; font-size:12px;}
-.success { display: none; padding:2px 10px 2px 10px; background:#E5EAD4; color:#555; width:280px;  font-size:12px;}
-.error img { vertical-align:top; }
-.full{ width:98%;}
-
-.page-not-found { display:block; padding:100px 0 100px 0; text-align:center; font-size:20px;}
-.page-not-found h1{ font-size:160px; margin-bottom:60px; font-weight:bold; color:#ccc;}
-
-.blue{ background:#3bb6df; padding:15px;}
-.red{ background:#F36; padding:15px;}
-.orange{ background:#F90; padding:15px;}
-.green{ background:#3C0; padding:15px;}
-
-/* -------------------------------------------------- 
-	isotope
-/* -------------------------------------------------- */
-.isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
-
-.isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
-}
-
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-          transition-property:         transform, opacity;
-}
-
-/**** disabling Isotope CSS3 transitions ****/
-
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
-}
 
 #filters{padding:0; margin:0; margin-bottom:20px;}
 #filters li{display:inline-block; margin-right:3px;  margin-bottom:20px; }
 #filters a{color:#fff; padding:5px 10px 5px 10px; color:#555; border:solid 1px #ddd; text-decoration:none;}
 #filters a:hover{ border:solid 1px #96C277;}
 #filters a.selected{ background:#96C277; border:solid 1px #96C277; color:#FFF;}
-
-.isotope-item {
-  z-index: 2;
-}
-
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
-
-#flickr-photo-stream img{ width:50px; height:auto; margin:0 12px 12px 0; float:left;}
-#flickr-photo-stream a img {border:solid 3px #fff;}
-#flickr-photo-stream a:hover img {border:solid 3px #96C277;}
 
 #call-to-action{
 	background:url(../img/bg-blur-2.jpg) bottom center;

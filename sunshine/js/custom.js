@@ -83,8 +83,7 @@ jQuery(document).ready(function() {
 	$(function() {
 		
 		$('#galleryCarousel').carousel({
-		//interval: 4000
-		interval:0
+		interval: 4000
 		});
 		
 		$('#myCarouselThumbs').carousel({
@@ -104,7 +103,7 @@ jQuery(document).ready(function() {
 		  id = parseInt(id);
 		  
 		  // Navigate to the selected from thumb carousel photo-item
-		  $('#myCarousel').carousel(id);
+		  $('#galleryCarousel').carousel(id);
 		  
 		  // Update the photo carousel
 		  $('[id^=carousel-selector-]').removeClass('selected');
@@ -118,7 +117,7 @@ jQuery(document).ready(function() {
 	
 	// Handles the photo carousel slide event, auto update the thumb carousel
 	function autoslideGalleryPhoto_handler() {
-		$('#myCarousel').on('slide.bs.carousel', function (e) {
+		$('#galleryCarousel').on('slide.bs.carousel', function (e) {
 		  var photoId = $('.item.active.photo-item').data('slide-number');
 		  
 		  // Prepare the thumb carousel for the photo carousel auto slide
