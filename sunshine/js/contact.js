@@ -27,12 +27,18 @@ $(document).ready(function() {
         if(error == false) {
            //$("#send").attr({"disabled" : "true", "value" : "Изпращане..." });
             
-           $.ajax({
+/*            $.ajax({
              type: "POST",
-             url : "./send.php",    
-             data: "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message,
+             url : "https://api:key-29aa5438836eef41f32815976693a128@api.mailgun.net/v3/mg.nikol-house.com/messages",    
+             data: { from: name + "<" + email + ">",  to:"info@nikol-house.com", subject:subject, text:message},
+			 //without this xhrFields withCredentials shit it doesn't work!!!
+			 xhrFields: {
+				withCredentials: true
+			 },
+			 crossDomain: true,
              success: function(data){    
               if(data == 'success'){
+				alert("success: " + data.responseText);
                 $("#btnsubmit").remove();
                 $("#mail_success").fadeIn(500);
               }else{
@@ -40,11 +46,40 @@ $(document).ready(function() {
                 $("#send").removeAttr("disabled").attr("value", "Изпрати");
               }     
              },
-			error: function(e) {
-			alert("fuck it");
-			alert(e.responseText);
+			error: function(xhr, status, e) {
+			console.log(xhr);
+			console.log(status);
+			console.log(e);
+			alert("error: ");
 			}			
-           });  
+           }); */ 
+		   var test = function (data) {
+			alert(data);
+		   };
+           $.ajax({
+             type: "GET",
+             url : "https://api:key-29aa5438836eef41f32815976693a128@api.mailgun.net/v3/mg.nikol-house.com/messages",    
+             data: { from: name + "<" + email + ">",  to:"info@nikol-house.com", subject:subject, text:message},
+			 dataType: "jsonp",
+			 crossDomain: true,
+			 jsonpCallback: "test",
+             success: function(data){    
+              if(data == 'success'){
+				alert("success: " + data.responseText);
+                $("#btnsubmit").remove();
+                $("#mail_success").fadeIn(500);
+              }else{
+                $("#mail_failed").html(data).fadeIn(500);
+                $("#send").removeAttr("disabled").attr("value", "Изпрати");
+              }     
+             },
+			error: function(xhr, status, e) {
+			console.log(xhr);
+			console.log(status);
+			console.log(e);
+			alert("error: ");
+			}			
+           });		   
         }
 		    
 		return false;                      
