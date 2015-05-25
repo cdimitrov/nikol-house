@@ -33,14 +33,25 @@ img {
     vertical-align: middle;
 }
 
+#site-title {
+	font-family: 'marck script';
+	font-style: cursive;
+	font-weight:bold;
+	font-size: 48px;
+	color: #000000;
+	line-height:61px;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
 /*-------------------------------------------------- 
 /* heading
 /*-------------------------------------------------- */
-h1,h2 {
+h1 {
 	font-weight:lighter;
 }
 
-h3,h4,h5,h6 {
+h2,h3,h4,h5,h6 {
 	font-weight:500; 
 	color:#000000;
 }
@@ -55,25 +66,7 @@ h1.h1-style {
 	font-weight:lighter;
 }
 
-h1.title {
-	font-family: 'marck script';
-	font-style: cursive;
-	font-weight:bold;
-	font-size: 48px;
-	color: #000000;
-	line-height:61px;
-}
-
-h3.title {
-	font-family:marck script, cursive;
-	font-size:24px;
-	font-weight:700;
-	padding-bottom:10px;
-	margin-bottom:20px;
-	line-height:31px;
-}
-
-h2 {
+h1 {
 	font-family:marck script, cursive;
 	font-size:38px;
 	font-weight:700;
@@ -82,11 +75,21 @@ h2 {
 	line-height:48px;
 	margin-left:5px;
 }
-h3.title-property {
+
+h2.title {
+	font-family:marck script, cursive;
+	font-size:24px;
+	font-weight:700;
+	padding-bottom:10px;
+	margin-bottom:20px;
+	line-height:31px;
+}
+
+h2.title-property {
 	margin:0;
 }
 
-h3 {
+h2 {
 	letter-spacing:-1px;
 	margin-top:0;
 }
@@ -206,8 +209,9 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 	margin-top:15px;
 }
 
-h3.about {
+h2.about {
 	margin-bottom:0px;
+	margin-top:0px;
 	height: 62px;
 }
 
@@ -235,7 +239,7 @@ h3.about {
 /* accommodation
 /*-------------------------------------------------- */
 
-h3.room-title {
+h2.room-title {
 	margin-bottom:0px;
 }
 
@@ -260,19 +264,6 @@ h3.room-title {
 	padding-top:10px;
 	padding-bottom:0px;
 }
-
-/* .price-info {
-	text-shadow:none;
-	display:inline-block;
-	background:#fff;
-	border:solid 1px #ddd;
-	padding:5px 10px 0px 10px;
-	border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
-	-webkit-box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.2);
-	-moz-box-shadow:    1px 1px 1px rgba(50, 50, 50, 0.2);
-	box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.2);
-
-} */
 
 #accommodation-btn, #troyan-btn {
 	margin-top:19px;
@@ -372,14 +363,14 @@ h3.room-title {
 	padding-top:5px;
 }
 
-h3.troyan {
+h2.troyan {
 	font-family: marck script, cursive;
 	font-size: 32px;
 	font-weight: bold;
 	line-height: 41px;
 }
 
-h4.troyan {
+h3.troyan {
 	font-family: marck script, cursive;
 	font-size: 24px;
 	font-weight: bold;
@@ -411,41 +402,52 @@ h4.troyan {
 }
 
 #contact {
-	padding-top:5px;
+	padding-top: 5px;
 }
 
 #contact-address, #contact-phone , #contact-mail{
 	margin-bottom:25px;
 }
 
-.contact-info{
+.contact-info {
 	font-size: 17px;
 	padding-left:20px;
+	margin-top:10px;
+}
+
+.enquiry {
+	margin-top:10px;
 }
 
 .contact-title {
 	font-size: 17px;
 	font-weight:bold;
 	margin-bottom:3px;
+	line-height:18.7px;
 }
 
 .enquiry-title {
 	padding-left:5px;
+	letter-spacing:0px;
 }
 
-input,textarea::-webkit-input-placeholder { /* WebKit browsers */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder { /* WebKit browsers */
 	color: #a9a9a9;
 }
 
-input,textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+input::-moz-placeholder,
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	color: #a9a9a9;
 }
 
-input,textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+input::-moz-placeholder,
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
 	color: #a9a9a9;
 }
 
-input,textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+input::-moz-placeholder,
+textarea::-ms-input-placeholder { /* Internet Explorer 10+ */
 	color: #a9a9a9;
 }
 
