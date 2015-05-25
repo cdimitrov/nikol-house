@@ -4,7 +4,7 @@ $(document).ready(function() {
         var name   = $("#name").val();
         var email  = $("#email").val();
         var message  = $("#message").val();
-		var subject = $("#subject").val();
+        var subject = $("#subject").val();
 
         var error = false;
 
@@ -27,26 +27,43 @@ $(document).ready(function() {
         
         //all fields are correct, then send mail 
         if(error == false) {
-           //$("#send").attr({"disabled" : "true", "value" : "Изпращане..." });
+           $("#send").attr({"disabled" : "true", "value" : "Изпращане..." });
            
            $.ajax({
              type: "POST",
              url : "./send.php",    
              data: "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message,
-             success: function(data){  
-	              if(data == 'success'){
-	                console.log(data);
-	                $("#btnsubmit").remove();
-	                $("#mail_success").fadeIn(500);
-              		}else{
-              		console.log(data);
-	                $("#mail_failed").html(data).fadeIn(500);
-	                $("#send").removeAttr("disabled").attr("value", "Изпрати");
-              }
-             },
+             	success: function(data, textStatus, xhr){  
+	        	if(xhr.status == 200){
+	              		console.log(data);
+		                $("#send").removeAttr("disabled").attr("value", "Изпрати");
+		                $("#form-output").text("Благодарим Ви за запитването!").css({ 'visibility' : 'visible', 'color' : '#555' });
+		                $("#name").val('');
+		                $("#email").val('');
+		                $("#message").val('');
+		                $("#subject").val('');
+		                $("#form-output").delay(4500).queue(function (next) { 
+				    $(this).css('visibility', 'hidden'); 
+				    next(); 
+				});
+              	      	}else {
+              			console.log(data);
+	                	$("#send").removeAttr("disabled").attr("value", "Изпрати");
+	               		$("#form-output").text("Грешка. Съобщението не беше изпратено.").css({ 'visibility' : 'visible', 'color' : '#C03' });
+	                	$("#form-output").delay(4500).queue(function (next) { 
+			    		$(this).css('visibility', 'hidden'); 
+			    		next(); 
+			  	});
+              		}
+             	},
 		error: function(e) {
-		alert("Failed to send request.");
-		console.log(e);
+			console.log(e);
+			$("#send").removeAttr("disabled").attr("value", "Изпрати");
+	                $("#form-output").text("Грешка. Съобщението не беше изпратено.").css({ 'visibility' : 'visible', 'color' : '#C03' });
+	                $("#form-output").delay(4500).queue(function (next) { 
+			    $(this).css('visibility', 'hidden'); 
+			    next(); 
+			  });
 		}
            }); 
              

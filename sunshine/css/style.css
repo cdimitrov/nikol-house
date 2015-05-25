@@ -458,9 +458,8 @@ textarea::-ms-input-placeholder { /* Internet Explorer 10+ */
 	font-size:14px;
 	font-family: Roboto;
 }
-
-.success { 
-	display: none; 
+.form-output{ 
+	visibility: hidden; 
 	padding:0px 5px 5px 5px; 
 	color:#555; 
 	font-size:14px;
@@ -472,6 +471,7 @@ textarea::-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 
 #map-container {
+	margin-top: 20px;
 	padding-left:5px;
 	padding-top:10px;
 	padding-right:5px;
