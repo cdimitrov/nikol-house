@@ -4,128 +4,139 @@ jQuery(document).ready(function() {
 	// ==================================================
 	domready(function(){
 		selectnav('mainmenu', {
-			label: 'Menu',
+			label: '',
 			nested: true,
 			indent: '-'
 		});
 	});
 	
-
-	
 	// ==================================================
-	// filtering gallery
-	// ==================================================	
-	var $container = $('#gallery');
-
-	$container.imagesLoaded(function() {
-	  $container.isotope({
-		itemSelector: '.item',
-		filter: '*',
-	  });
-	});
-	
-	jQuery('#filters a').click(function(){
-		var jQuerythis = jQuery(this);
-		if ( jQuerythis.hasClass('selected') ) {
-			return false;
-			}
-		var jQueryoptionSet = jQuerythis.parents();
-		jQueryoptionSet.find('.selected').removeClass('selected');
-		jQuerythis.addClass('selected');
-				
-		var selector = jQuery(this).attr('data-filter');
-		jQuerycontainer.isotope({ 
-		filter: selector,
-	});
-	return false;
-	});
-	
-	
+	// Accommodation room sliders
 	// ==================================================
-	// prettyPhoto function
-	// ==================================================	
-	jQuery("area[rel^='prettyPhoto']").prettyPhoto();
-	jQuery(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
-	jQuery(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+	
+	$(function() {
+		$('#circleRoomCarousel').carousel({
+		interval: 4000
+		});
 		
-	jQuery("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
-		custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
-		changepicturecallback: function(){ initialize(); }
-	});
-	jQuery("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
-		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
-		changepicturecallback: function(){ _bsap.exec(); }
-	});
-	
-	
-	// ==================================================
-	// scroll to top
-	// ==================================================	
-	jQuery().UItoTop({ easingType: 'easeOutQuart' });
-	  
-	// ==================================================
-	// gallery hover
-	// ==================================================	
-	jQuery('.gallery .item').hover(function() {
-	jQuery('.gallery .item').not(jQuery(this)).stop().animate({opacity: .3}, 100);
-	}, function() {
-	jQuery('.gallery .item').stop().animate({opacity: 1});}, 100);
-	
-	
-	// ==================================================
-	// resize
-	// ==================================================	
-	window.onresize = function(event) {
-		jQuery('#gallery').isotope('reLayout');
-  	};
-	
-	
-	// ==================================================
-	// show / hide slider navigation
-	// ==================================================	
-	jQuery('.callbacks_nav').hide();
-	
-	jQuery('#slider').hover(function() {
-	jQuery('.callbacks_nav').stop().animate({opacity: 1}, 100);
-	}, function() {
-	jQuery('.callbacks_nav').stop().animate({opacity: 0});}, 100);
-	
-	
-	
-	
-	jQuery(function () {
-      // Slideshow 4
-      jQuery(".pic_slider").responsiveSlides({
-        auto: true,
-        pager: false,
-        nav: true,
-        speed: 500,
-        namespace: "callbacks",
-        before: function () {
-          jQuery('.events').append("<li>before event fired.</li>");
-        },
-        after: function () {
-          jQuery('.events').append("<li>after event fired.</li>");
-        }
-      });
-    });
-	
-	
-	
-	
-	// ==================================================
-	// lazyload
-	// ==================================================	
-	 $(function() {
-          $("img").lazyload({
-              effect : "fadeIn",
-			  effectspeed: 900 
-          });
-      });
+		$('#whiteRoomCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#flowerRoomCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#peachRoomCarousel').carousel({
+		interval: 4000
+		});
 
+	});
+	
+	// ==================================================
+	// About Troyan
+	// ==================================================
+	
+	$(function() {
+		$('#troyanCarousel').carousel({
+		interval: 4000
+		});
+		
+		 $('#naturalArtMuseumCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#seryakovaHouseCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#naturalSciencesMuseumCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#seryakovaHouseCarousel').carousel({
+		interval: 4000
+		}); 
+		
+		$('#troyanMonasteryCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#zelenikovskiMonasteryCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#sostraCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#babaStanaCarousel').carousel({
+		interval: 4000
+		});
 
+	});	
 	
+	// ==================================================
+	// Gallery slider with thumbnails
+	// ==================================================
 	
+	$(function() {
+		
+		$('#galleryCarousel').carousel({
+		interval: 4000
+		});
+		
+		$('#myCarouselThumbs').carousel({
+		interval: 0
+		});
+		
+		selectGalleryThumb_handler();
+		autoslideGalleryPhoto_handler();
+		
+	});
 	
+	// Handles the thumbnails carousel selection
+	function selectGalleryThumb_handler() {
+		$('[id^=carousel-selector-]').click( function(){
+		  var id_selector = $(this).attr("id");
+		  var id = id_selector.replace('carousel-selector-','');
+		  id = parseInt(id);
+		  
+		  // Navigate to the selected from thumb carousel photo-item
+		  $('#galleryCarousel').carousel(id);
+		  
+		  // Update the photo carousel
+		  $('[id^=carousel-selector-]').removeClass('selected');
+		  $(this).addClass('selected');
+		  
+		  // Update the thumb carousel active page
+		  $('.thumb-page').removeClass('active');
+		  $(this).parents('.thumb-page').addClass('active');
+		});
+	}
+	
+	// Handles the photo carousel slide event, auto update the thumb carousel
+	function autoslideGalleryPhoto_handler() {
+		$('#galleryCarousel').on('slide.bs.carousel', function (e) {
+		  var photoId = $('.item.active.photo-item').data('slide-number');
+		  
+		  // Prepare the thumb carousel for the photo carousel auto slide
+		  // Set the selected thumb ID to be the next one 
+		  var id = parseInt(photoId) + 1;
+		  if($('[id^=carousel-selector-]').length <= id)
+		  {
+			id = 0;
+		  }
+		  $('[id^=carousel-selector-]').removeClass('selected');
+		  $('[id=carousel-selector-'+id+']').addClass('selected');
+		  
+		  // Set the selected thumb page and auto slide to it
+		  var currentThumbPage = $('[id=carousel-selector-'+id+']').parents('.thumb-page');
+		  $('.thumb-page').removeClass('active');
+		  currentThumbPage.addClass('active');
+		  var currentThumbPageIndex = parseInt(currentThumbPage.data('thumb-page'));
+		  $('#myCarouselThumbs').carousel(currentThumbPageIndex);
+		});
+	}
+
 });
-
