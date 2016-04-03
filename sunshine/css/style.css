@@ -196,18 +196,6 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 	text-align:justify;
 }
 
-@media screen and (min-width: 1024px)  {
-	.large-device-align-right {
-		text-align: right;
-		}
-}
-
-@media screen and (max-width: 1024px)  {
-	.small-device-button {
-		margin-top: 10px;
-	}
-}
-
 .about-container {
 	background-color:rgba(205,220,186,0.4);
     border-radius: 5px;
@@ -765,11 +753,6 @@ footer .social-icons img{margin:0 0;}
 	margin: 10px 10px 0px 0px;
 }
 
-.room-people {
-	height: 20px;
-	margin: 0px 4px 0px 0px;
-}
-
 hr{
 	border:none;
 	height:80px;
@@ -804,11 +787,14 @@ hr{
 
 }
 
-address span{
-    display:block;
-}
-address span strong{
-    display:inline-block;
-    width:60px;
+@media screen and (min-width: 1024px)  {
+	.large-device-align-right {
+		text-align: right;
+		}
 }
 
+@media screen and (max-width: 1024px)  {
+	.small-device-button {
+		margin-top: 10px;
+	}
+}
