@@ -194,7 +194,6 @@ box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.1);
 	line-height:19px;
 	word-wrap:break-word;
 	text-align:justify;
-	padding-bottom:10px;
 }
 
 .about-container {
@@ -249,8 +248,8 @@ h2.room-title {
 }
 
 .room-price {
-	font-family:Roboto,Arial,sans-serif;
-	font-size: 16px;
+	font-family:marck script, cursive;
+	font-size: 20px;
 	font-weight: bold;
 	margin-bottom:5px;
 }
@@ -272,6 +271,11 @@ h2.room-title {
 .room-carousel {
 	/*border: 4px double black;*/
 	/*margin: 5px 0px;*/
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
 }
 
 .booking-btn {
@@ -744,6 +748,10 @@ text-align:right;
 .social-icons img{margin:0 5px 5px 0;}
 footer .social-icons img{margin:0 0;}
 
+.room-extras {
+	height: 25px;
+	margin: 10px 10px 0px 0px;
+}
 
 hr{
 	border:none;
@@ -779,11 +787,14 @@ hr{
 
 }
 
-address span{
-    display:block;
-}
-address span strong{
-    display:inline-block;
-    width:60px;
+@media screen and (min-width: 1024px)  {
+	.large-device-align-right {
+		text-align: right;
+		}
 }
 
+@media screen and (max-width: 1024px)  {
+	.small-device-button {
+		margin-top: 10px;
+	}
+}
